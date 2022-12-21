@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I\'m bored. Let\'s play Rock Paper Scissor Game!">
+    <meta name="keywords" content="Rock Paper Scissor Game">
+    <meta name="author" content="Vita Tri Utami">
+    
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/game.css">
+    
+    <!--JavaScript-->
+    <script src="http://localhost:3000/javascript/main.js" defer></script>
+    
+    <!--Title & Favicon-->
+    <title><%= title %></title>
+    <link rel="icon" href="http://localhost:3000/images/logo.png">
+</head>
+<body>
+
+
+    <!--Top Navigation-->
+    <header>
+        <div class="back">
+            <h1>
+                <a href="http://localhost:3000/"><</a>
+            </h1>
+        </div>
+        <div class="brand">
+            <img src="http://localhost:3000/images/logo.png" alt="logo" class="logo">
+            <h1>ROCK PAPER SCISSORS</h1>
+        </div>
+    </header>
+
+    <!--Game Box-->
+    <section>
+        <div class="game-area">
+            <!--Player-->
+            <div class="player-choice">
+                <h1 class="player-name">PLAYER 1</h1>
+                <div class="used">
+                <button class="user-tool your-tool dissap"  id="rock">
+                    <img class="tool" src="http://localhost:3000/images/batu.png" alt="rock">
+                </button>
+                <button class="user-tool your-tool dissap"  id="paper">
+                    <img class="tool" src="http://localhost:3000/images/kertas.png" alt="paper">
+                </button>
+                <button class="user-tool your-tool dissap"  id="scissor">
+                    <img class="tool" src="http://localhost:3000/images/gunting.png" alt="scissor">
+                </button>
+                </div>
+            </div>
+
+            <!--Center Navigation-->
+            <div class="vs-reset">
+                <div class="boxR" id="box">
+                    <h1 id="results">VS</h1>
+                </div>
+            
+                <!--Refresh-->
+                <div class="refresh">
+                    <img id="refresh" src="http://localhost:3000/images/refresh.png" alt="reset">
+                </div>
+            </div>
+
+            <!--Com Player-->
+            <div class="com-choice">
+                <h1 class="player-name">COM</h1>
+                <div class="used">
+                <button class="user-tool your-tool dissap" id="com_rock">
+                    <img src="http://localhost:3000/images/batu.png" alt="rock">
+                </button>
+                <button class="user-tool your-tool dissap"  id="com_paper">
+                    <img class="tool" src="http://localhost:3000/images/kertas.png" alt="paper">
+                </button>
+                <button class="user-tool your-tool dissap"  id="com_scissor">
+                    <img class="tool" src="http://localhost:3000/images/gunting.png" alt="scissor">
+                </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

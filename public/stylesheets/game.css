@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Poppins:400,500,700,800");
+
+:root {
+    /*Primary*/
+    --bg-full: #9C835F;
+    --back-button: #9C835F;
+    --game-title: #F9B23D;
+    --name-player: #000;
+
+    /*Neutral*/
+    --playing: #C4C4C4;
+    --bg-result: #4C9654;
+    --versus: #BD0000;
+    /*Font-weight*/
+    --bold: 700;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    font-weight: var(--bold);
+    background-color: var(--bg-full);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*Top Navigation*/
+header {
+    display: flex;
+    margin: 30px 0 0 30px;
+}
+.back a {
+    color: #724C21;
+    text-decoration: none;
+}
+.back a:hover {
+    background-color: gold;border-radius: 150px;
+}
+.back{
+    display: grid;
+    place-items: center;
+}
+.back:hover {
+    transform: scale(1.5);
+}
+.brand {
+    display: flex;
+    align-items: center;
+    margin-left: 27px;
+}
+.brand img{
+    width: 72px;
+    height: 72px;
+}
+.brand h1{
+    margin-left: 17px;
+    font-size: 1.5em;
+    width: 100%;
+    color: #F9B23D;
+}
+
+/*Main section*/
+section{
+    margin: 5px auto;
+}
+.game-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.player-name {
+    font-size: 36px;
+    letter-spacing: 0.15rem;
+}
+.allignK{
+    width: 100%;
+}
+.user-tool img{
+    width: 70%;
+}
+button {
+    background-color: transparent;
+    border-color: transparent;
+    width: 30%;   
+    height: 120px;
+}
+.your-tool{
+    cursor: pointer;
+}
+.your-tool:hover {
+    transform: rotate(20deg);
+    animation-name: buttonAnimate;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}@keyframes buttonAnimate {
+    0% {transform: rotate(20deg);}
+    25% {transform: rotate(10deg);}
+    50% {transform: rotate(0deg);}
+    65% {transform: rotate(-10deg);}
+    85% {transform: rotate(-20deg);}
+    100% {transform: rotate(10deg);}}
+
+
+/*Navigation*/
+.vs-reset {
+    margin: 20px 10px;
+}
+.vs-reset h1 {
+    font-size: 44px;
+    color: var(--versus);
+    font-weight: var(--bold);
+}
+/*JS*/
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+}
+.upWinner {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    background: #4C9654;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;   
+}
+.upDraw {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    margin:  15px auto;
+    padding: 15px;
+    background: #035B0C;
+    border-radius: 10px;   
+}
+
+
+
+/*Tools*/
+.brand{
+    width: 100%;
+}
+.brand h1 {
+    color: var(--game-title);
+    margin-left: 27px;
+}
+.vs-reset {
+    display: flex;
+    flex-direction: column;
+}
+.vs-reset h1 {
+    font-size: 144px;
+    color: var(--versus);
+    font-weight: var(--bold);
+}
+
+
+/* Add with JS */
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 30px
+}
+.boxR {
+    margin-top: 120px;
+    display: grid;
+    place-items: center;
+}
+.upWinner {
+    margin-top: 250px;
+    width: 271.11px;
+    height: 166.93px;
+    background: #4C9654;
+    border-radius: 10px;
+    transform: rotate(-25deg);
+}
+.upDraw {
+    margin-top: 250px;
+    width: 271.11px;
+    height: 166.93px;
+    background: #035B0C;
+    border-radius: 10px;
+    transform: rotate(-25deg);
+}
+
+/*JS*/
+
+@media(min-width:750px){
+    .game-area{
+        flex-direction: row;
+        transform: translateX(15%);
+        }
+    .used{
+        display: flex;
+        flex-direction: column;
+    }
+    .user-tool{
+        align-self: center;
+        width: 223px;
+        height: 204px;
+    }
+    .user-tool img{
+        width: 50%;
+    }
+    .vs-reset img {
+        width: 50px;
+        cursor: pointer;
+        transform: translateY(260%);
+    }
+    .vs-reset {
+        margin: auto 50px;
+        width: 300px    
+    }
+    .vs-reset h1{
+        font-size: 144px;
+    }
+    .player-choice{
+        margin: auto 5% 0 0
+    }
+    .com-choice{
+        margin: auto 0 0 5%;
+    }
+}
